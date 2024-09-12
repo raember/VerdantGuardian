@@ -1,2 +1,5 @@
 astropy
+astroplan
+timezonefinder
+ambiance
 spoofbot==1.4.0

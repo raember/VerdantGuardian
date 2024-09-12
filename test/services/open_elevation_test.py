@@ -1,12 +1,13 @@
 import unittest
 from time import sleep
 
+from common import ZURICH_COORDS, ZURICH_ALTITUDE
 from verdantguardian.services.open_elevation import OpenElevationService
 
 class OpenElevationServiceTest(unittest.TestCase):
     def test_simple(self):
-        zurich_coords = (47.35953600, 8.63564520)
-        self.assertEqual(582, OpenElevationService.get_elevation(zurich_coords[0], zurich_coords[1]))
+        lat, lon = ZURICH_COORDS
+        self.assertEqual(ZURICH_ALTITUDE, OpenElevationService.get_elevation(lat, lon))
 
 if __name__ == '__main__':
     unittest.main()
